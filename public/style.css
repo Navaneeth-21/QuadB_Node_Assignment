@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1e1f26;
+    color: white;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    /* background-color: #2d2e37; */
+    margin-bottom: 10px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00ccff;
+    margin-left: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.controls select, .controls button, .connect-telegram {
+    background-color: #2d2e37;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.connect-telegram {
+    background-color: #00ccff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+button {
+    background-color: #00ccff;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #00ccff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.market-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    background-color: #2d2e37;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.market-stat {
+    text-align: center;
+}
+
+.main-stat p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    color: #00ccff;
+}
+
+.crypto-table {
+    background-color: #2d2e37;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 350px;
+    overflow-y: auto;
+    position: relative;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+td {
+    background-color: #444;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #3a3b45;
+}
+
+tbody tr:hover {
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-to-home {
+    text-align: center;
+    margin-top: 15px; 
+}
+
+.add-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ccff;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-home-btn:hover {
+    background-color: #0099cc;
+}
+
+body.light-mode .crypto-table {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+body.light-mode th, body.light-mode td {
+    background-color: #d0d0d0;
+}
+
+
+body.light-mode tbody tr:hover {
+    background-color: #b0b0b0;
+}
+
+body.light-mode .add-home-btn {
+    background-color: #0099cc;
+    color: white;
+}
+
+body.light-mode .add-home-btn:hover {
+    background-color: #0077aa;
+}
+
+
+body.light-mode .market-info,
+body.light-mode .controls select,
+body.light-mode .controls button,
+body.light-mode .controls a,
+body.light-mode .crypto-table {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+body.light-mode th, body.light-mode td {
+    background-color: #d0d0d0;
+}
+
+body.light-mode .controls .connect-telegram {
+    background-color: #00ccff;
+    color: black;
+}

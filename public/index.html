@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <header>
+            <h1 class="logo">HODLINFO</h1>
+            <div class="controls">
+                <select>
+                    <option>INR</option>
+                    <option>USD</option>
+                </select>
+                <select>
+                    <option>BTC</option>
+                    <option>ETH</option>
+                </select>
+                <button>BUY BTC</button>
+                <a href="https://hodlinfo.com/connect/telegram" class="connect-telegram">Connect Telegram</a>
+                <div class="theme-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <section class="market-info">
+            <div class="market-stat">
+                <p>0.1%</p>
+                <p>5 Mins</p>
+            </div>
+            <div class="market-stat">
+                <p>0.96%</p>
+                <p>1 Hour</p>
+            </div>
+            <div class="market-stat main-stat">
+                <p>₹ 26,56,110</p>
+                <p>Best Price to Trade</p>
+            </div>
+            <div class="market-stat">
+                <p>2.73%</p>
+                <p>1 Day</p>
+            </div>
+            <div class="market-stat">
+                <p>7.51%</p>
+                <p>7 Days</p>
+            </div>
+        </section>
+
+        <section class="crypto-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Platform</th>
+                        <th>Last Traded Price</th>
+                        <th>Buy / Sell Price</th>
+                        <th>Difference</th>
+                        <th>Savings</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-data">
+                    <!-- JS will populate this section -->
+                </tbody>
+            </table>
+        </section>
+        <div class="add-to-home">
+            <a href="#" class="add-home-btn">Add hodlinfo to home screen</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
